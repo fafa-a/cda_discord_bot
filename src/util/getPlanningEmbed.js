@@ -56,7 +56,13 @@ const getEmbed = () => {
       },
       {
         name: "Mardi " + (lundi + 1),
-        value: actualMonth[lundi + 1].title,
+        value: actualMonth[lundi + 1].title + "(aprèm)",
+        inline: true,
+      },
+      {
+        name: "Mardi " + (lundi + 1),
+        value: actualMonth[lundi + 1].option.title + "(matin)",
+        inline: true,
       },
       {
         name: "Mercredi " + (lundi + 2),
@@ -67,7 +73,7 @@ const getEmbed = () => {
         value: actualMonth[lundi + 2].title,
       },
       {
-        name: "Vendredi " + (lundi + 4) ,
+        name: "Vendredi " + (lundi + 4),
         value: actualMonth[lundi + 3].title + " (matin)",
       },
     ],

@@ -102,7 +102,12 @@
     },
     {
       "day": 26,
-      "title": "BD : Langage PL/pgSQL"
+      "title": "BD : Langage PL/pgSQL",
+      "option": {
+        "am": true,
+        "group": true,
+        "title": "Anglais"
+      }
     },
     {
       "day": 27,
