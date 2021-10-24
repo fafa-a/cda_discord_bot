@@ -52,29 +52,30 @@ const getEmbed = () => {
     fields: [
       {
         name: "Lundi " + lundi,
+        value: actualMonth[lundi - 1].title,
+      },
+      {
+        name: "Mardi " + (lundi + 1) + " " + "matin",
+        value: actualMonth[lundi].option.title,
+        inline: true,
+      },
+      {
+        name: "Mardi " + (lundi + 1) + " " + " après-midi",
         value: actualMonth[lundi].title,
-      },
-      {
-        name: "Mardi " + (lundi + 1),
-        value: actualMonth[lundi + 1].title + "(aprèm)",
         inline: true,
       },
-      {
-        name: "Mardi " + (lundi + 1),
-        value: actualMonth[lundi + 1].option.title + "(matin)",
-        inline: true,
-      },
+
       {
         name: "Mercredi " + (lundi + 2),
-        value: actualMonth[lundi + 2].title,
+        value: actualMonth[lundi + 1].title,
       },
       {
         name: "Jeudi " + (lundi + 3),
         value: actualMonth[lundi + 2].title,
       },
       {
-        name: "Vendredi " + (lundi + 4),
-        value: actualMonth[lundi + 3].title + " (matin)",
+        name: "Vendredi " + (lundi + 4) + " " + "matin",
+        value: actualMonth[lundi + 3].title,
       },
     ],
   }
