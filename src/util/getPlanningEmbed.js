@@ -2,7 +2,7 @@ const data = require("../assets/json/planning2021_2022.json")
 
 const date = new Date()
 const today = date.getDate()
-console.log({ today })
+
 const capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1)
 const month = capitalize(
   new Intl.DateTimeFormat("fr-FR", { month: "long" }).format(date)
