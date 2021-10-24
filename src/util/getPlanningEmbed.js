@@ -36,52 +36,52 @@ switch (weekDay) {
   default:
     lundi = today
 }
-
+console.log({ lundi })
 let embed = {}
 const getEmbed = () => {
-  if (weekDay === "Samedi" || weekDay === "Dimanche") {
-    embed = {
-      color: 0x0debff,
-      title: "Week end",
-      description: `Prends soin des tiens, reposes toi bien.
-      Sinon fais tes devoirs et ton ménage.
-      A lundi bisous calins!
-      😘`,
-    }
-  } else {
-    embed = {
-      color: 0xf7f41e,
-      title: weekDay + " " + today + " " + month,
-      fields: [
-        {
-          name: "Lundi " + lundi,
-          value: actualMonth[lundi - 1].title,
-        },
-        {
-          name: "Mardi " + (lundi + 1) + " " + "matin",
-          value: actualMonth[lundi].option.title,
-          inline: true,
-        },
-        {
-          name: "Mardi " + (lundi + 1) + " " + " après-midi",
-          value: actualMonth[lundi].title,
-          inline: true,
-        },
-        {
-          name: "Mercredi " + (lundi + 2),
-          value: actualMonth[lundi + 1].title,
-        },
-        {
-          name: "Jeudi " + (lundi + 3),
-          value: actualMonth[lundi + 2].title,
-        },
-        {
-          name: "Vendredi " + (lundi + 4) + " " + "matin",
-          value: actualMonth[lundi + 3].title,
-        },
-      ],
-    }
+  // if (weekDay === "Samedi" || weekDay === "Dimanche") {
+  //   embed = {
+  //     color: 0x0debff,
+  //     title: "Week end",
+  //     description: `Prends soin des tiens, reposes toi bien.
+  //     Sinon fais tes devoirs et ton ménage.
+  //     A lundi bisous calins!
+  //     😘`,
+  //   }
+  // } else {
+  embed = {
+    color: 0xf7f41e,
+    title: weekDay + " " + today + " " + month,
+    fields: [
+      {
+        name: "Lundi " + lundi,
+        value: actualMonth[lundi - 1].title,
+      },
+      {
+        name: "Mardi " + (lundi + 1) + " " + "matin",
+        value: actualMonth[lundi].option.title,
+        inline: true,
+      },
+      {
+        name: "Mardi " + (lundi + 1) + " " + " après-midi",
+        value: actualMonth[lundi].title,
+        inline: true,
+      },
+      {
+        name: "Mercredi " + (lundi + 2),
+        value: actualMonth[lundi + 1].title,
+      },
+      {
+        name: "Jeudi " + (lundi + 3),
+        value: actualMonth[lundi + 2].title,
+      },
+      {
+        name: "Vendredi " + (lundi + 4) + " " + "matin",
+        value: actualMonth[lundi + 3].title,
+      },
+    ],
   }
+  // }
   return embed
 }
 getEmbed()
