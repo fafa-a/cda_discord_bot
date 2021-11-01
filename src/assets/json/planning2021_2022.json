@@ -138,11 +138,16 @@
   "Novembre": [
     {
       "day": 1,
-      "title": ""
+      "title": "Jour férié"
     },
     {
       "day": 2,
-      "title": "BD : Etude de cas"
+      "title": "BD : Etude de cas",
+      "option": {
+        "am": true,
+        "group": true,
+        "title": "Anglais"
+      }
     },
     {
       "day": 3,

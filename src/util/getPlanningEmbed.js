@@ -36,7 +36,7 @@ switch (weekDay) {
   default:
     lundi = today
 }
-console.log({ lundi })
+
 let embed = {}
 const getEmbed = () => {
   // if (weekDay === "Samedi" || weekDay === "Dimanche") {
@@ -55,11 +55,12 @@ const getEmbed = () => {
     fields: [
       {
         name: "Lundi " + lundi,
-        value: actualMonth[lundi - 1].title,
+        value: actualMonth[lundi].title,
       },
       {
         name: "Mardi " + (lundi + 1) + " " + "matin",
-        value: actualMonth[lundi].option.title,
+        value:
+          actualMonth[lundi].option.title + " ou \n" + actualMonth[lundi].title,
         inline: true,
       },
       {
@@ -73,11 +74,13 @@ const getEmbed = () => {
       },
       {
         name: "Jeudi " + (lundi + 3),
-        value: actualMonth[lundi + 2].title,
+        // value: actualMonth[lundi + 2].title,
+        value: "Étude de cas",
       },
       {
         name: "Vendredi " + (lundi + 4) + " " + "matin",
-        value: actualMonth[lundi + 3].title,
+        // value: actualMonth[lundi + 3].title,
+        value: "Étude de cas",
       },
     ],
   }
